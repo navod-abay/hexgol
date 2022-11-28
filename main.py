@@ -15,8 +15,11 @@ class Node:
         self.state = False
         self.neighbours = self.find_neighbours()
 
-    def draw_hexagon(self):
-        pass
+    def draw_hexagon(self, r, p):
+        if (r % 2 == 1) :
+            X = (2 * p - 1) * DISTANCE /2
+        else:
+            X = p * DISTANCE
 
     def find_neighbours(self):
         neighbours = [(self.row, self.pos - 1), (self.row, self.pos + 1), (self.row + 1, self.pos - (self.row % 2)),
